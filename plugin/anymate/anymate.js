@@ -1,4 +1,6 @@
 // anymate.js
+var cmuSerifRegular;
+fetch('../../dist/theme/fonts/computer-modern/cmu.serif-regular.ttf').then(res => res.arrayBuffer()).then(data => cmuSerifRegular = opentype.parse(data));
 
 class anymate {
     init(reveal) {
