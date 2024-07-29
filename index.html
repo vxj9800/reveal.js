@@ -1,40 +1,93 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/myBlackTheme.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<!-- Add other necessary libraries that might be useful with anim objects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+
+<!-- Add javascript containing Anim class -->
+<script src="plugin/anymate/anim.js"></script>
+
+<!-- Add javascripts for Anim objects on each slide -->
+<script src="animRect.js"></script>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section data-auto-animate>
+				<h3>Reveal is not good in this case!</h3>
+				<div class="r-stretch">
+					<svg viewBox="-640 -300 1280 600" width="1280" height="600" style="position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+						<rect data-id="box2Circ" style="fill:none; stroke:white; stroke-width: 2;" width="500" height="200" x="-250" y="-100" rx="0" ry="0">
+					</svg>
+				</div>
+			</section>
+
+			
+
+
+			<section data-auto-animate>
+				<h3>Reveal is not good in this case!</h3>
+				<div class="r-stretch">
+					<svg viewBox="-640 -300 1280 600" width="1280" height="600" style="position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+						<rect data-id="box2Circ" style="fill:none; stroke:white; stroke-width: 2;" width="200" height="200" x="-100" y="-100" rx="100" ry="100">
+					</svg>
+				</div>
+			</section>
+
+
+
+
+			<section>
+				<h3>What Anymate can do!</h3>
+				<div class="r-stretch">
+					<svg viewBox="-640 -300 1280 600" width="1280" height="600" style="position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+						<rect id="animRect" class="fragment do-nothing" style="fill:none; stroke:white; stroke-width: 2;" width="500" height="200" x="-250" y="-100" rx="0" ry="0">
+					</svg>
+				</div>
+			</section>
+
+
+
+			
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/anymate/anymate.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+		Reveal.initialize({
+			hash: true,
+
+			// Define the size of slide
+			width: 1280,
+			height: 720,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, Anymate ]
+		});
+	</script>
+</body>
+
 </html>
