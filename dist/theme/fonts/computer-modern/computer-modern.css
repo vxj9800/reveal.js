@@ -14,14 +14,14 @@
 
 @font-face {
     font-family: "CMU Serif";
-    src: url('./cmu.bright-boldoblique.ttf') format('truetype');
+    src: url('./cmu.serif-bolditalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: "CMU Serif";
-    src: url('./cmu.bright-oblique.ttf') format('truetype');
+    src: url('./cmu.serif-italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
