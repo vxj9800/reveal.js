@@ -146,10 +146,10 @@
             slidesDeck.on('slidechanged', handleSlideChange);
             slidesDeck.on('fragmentshown', handleFragShown);
             slidesDeck.on('fragmenthidden', handleFragHidden);
-            slidesDeck.addKeyBinding({ keyCode: 32, key: 'space', descriptio: 'Play or Pause the animations' }, playPauseAnim);
-            slidesDeck.addKeyBinding({ keyCode: 82, key: 'R', descriptio: 'Reset the animations' }, callResetFuns);
-            slidesDeck.addKeyBinding({ keyCode: 188, key: '<', descriptio: 'Slow down the animations' }, decreaseAnimUpdateDt);
-            slidesDeck.addKeyBinding({ keyCode: 190, key: '>', descriptio: 'Speed up the animations' }, increaseAnimUpdateDt);
+            slidesDeck.addKeyBinding({ keyCode: 32, key: 'Space', description: 'Play or Pause the animations' }, playPauseAnim);
+            slidesDeck.addKeyBinding({ keyCode: 82, key: 'R', description: 'Reset the animations' }, callResetFuns);
+            slidesDeck.addKeyBinding({ keyCode: 188, key: '<', description: 'Slow down the animations' }, decreaseAnimUpdateDt);
+            slidesDeck.addKeyBinding({ keyCode: 190, key: '>', description: 'Speed up the animations' }, increaseAnimUpdateDt);
         },
 
         register: registerAnim
