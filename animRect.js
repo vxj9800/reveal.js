@@ -1,8 +1,6 @@
 let animRect = new anim('animRect')
 animRect.init = function () {
-    anime.remove(this.elem);
-    anime({
-        targets: this.elem,
+    anime.animate(this.elem, {
         width: 500,
         height: 200,
         x: -250,
@@ -13,9 +11,7 @@ animRect.init = function () {
     });
 }
 animRect.fragShown = function () {
-    anime.remove(this.elem);
-    anime({
-        targets: this.elem,
+    anime.animate(this.elem, {
         width: 200,
         height: 200,
         x: -100,

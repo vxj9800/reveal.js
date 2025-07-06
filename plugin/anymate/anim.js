@@ -19,6 +19,7 @@ class anim {
                 if (slide != null) {
                     this.idxh = Reveal.getIndices(slide).h;
                     this.idxv = Reveal.getIndices(slide).v;
+                    this.idxv = (typeof this.idxv === "undefined") ? 0 : this.idxv;
                     this.onCurrentSlide = false;
                     this.onCurrentFragm = false;
                     clearInterval(this.#initAnimIntIdx);
