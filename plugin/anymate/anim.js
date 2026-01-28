@@ -23,8 +23,8 @@ class anim {
                     this.onCurrentSlide = false;
                     this.onCurrentFragm = false;
                     clearInterval(this.#initAnimIntIdx);
-                    if (typeof this.init === "function")
-                        this.init();
+                    // if (typeof this.init === "function")
+                    //     this.init();
                     this.#registerWithAnymate();
                 }
                 else {

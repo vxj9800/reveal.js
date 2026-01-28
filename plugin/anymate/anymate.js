@@ -36,6 +36,13 @@
                 animObj.onCurrentSlide = false;
     }
 
+    // Initialize Current slide elements
+    function initCurrentSlideElems(idxh, idxv) {
+        for (let animObj of animObjs)
+            if (idxh == animObj.idxh && idxv == animObj.idxv)
+                animObj.init();
+    }
+
     // Function to call the update functions of the animations that are on the current slide
     function callUpdateFuns() {
         animUpdateCounter += animUpdateDt;
@@ -90,12 +97,16 @@
     function handleSlideChange(event) {
         callResetFuns();
         setCurrentSlideElems(event.indexh, event.indexv);
+        initCurrentSlideElems(event.indexh, event.indexv);
     }
 
     // Function to handle the slides ready event
     function handleSlidesReady(event) {
         if (animObjs.length)
+        {
             setCurrentSlideElems(event.indexh, event.indexv);
+            initCurrentSlideElems(event.indexh, event.indexv);
+        }
         else
             setTimeout(handleSlidesReady.bind(this, event), 500);
     }

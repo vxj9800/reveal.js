@@ -14,7 +14,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 :root {
   --r-background-color: #191919;
   --r-main-font: "CMU Serif";
-  --r-main-font-size: 42px;
+  --r-main-font-size: 32px;
   --r-main-color: #fff;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
@@ -68,6 +68,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal .slides section > section {
   line-height: 1.3;
   font-weight: inherit;
+  /*text-align: left; /* Align text to left by default */
 }
 
 /*********************************************
@@ -86,6 +87,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   line-height: var(--r-heading-line-height);
   letter-spacing: var(--r-heading-letter-spacing);
   text-transform: var(--r-heading-text-transform);
+  text-align: center; /* Remove the text alignment set in section block */
   text-shadow: var(--r-heading-text-shadow);
   word-wrap: break-word;
 }
@@ -362,6 +364,28 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * Other custom CSS stuff
  *********************************************/
 .reveal input[type=text] {
+  border: 2px solid var(--r-main-color);
+  border-radius: 5px;
+  padding: 5px;
+  background: var(--r-background-color);
+  font-family: var(--r-code-font);
+  font-size: var(--r-main-font-size);
+  color: var(--r-main-color);
+  text-align: center;
+}
+
+.reveal button {
+  border: 2px solid var(--r-main-color);
+  border-radius: 5px;
+  padding: 5px;
+  background: var(--r-background-color);
+  font-family: var(--r-code-font);
+  font-size: var(--r-main-font-size);
+  color: var(--r-main-color);
+  text-align: center;
+}
+
+.reveal input[type=number] {
   border: 2px solid var(--r-main-color);
   border-radius: 5px;
   padding: 5px;
